@@ -6,7 +6,8 @@ const userRoutes=require('./routes/userRoutes')
 const { sequelize } = require('./models');
 const cors = require('cors');
 
-const allowedOrigins = ['https://car-marketplace-frontend.vercel.app/', 'http://localhost:5173'];
+const allowedOrigins = [ 'https://car-marketplace-frontend.vercel.app',
+  'http://localhost:5173',   ];
 const app = express();
 app.use(express.json());
 // app.use(cors({ credentials:true })); // Replace with your React app’s origin
