@@ -16,6 +16,16 @@ if (config.use_env_variable) {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
+// (async () => {
+//   const [results] = await sequelize.query(`
+//     SELECT column_name, data_type, character_maximum_length
+//     FROM information_schema.columns
+//     WHERE table_name = 'Cars' AND column_name = 'listingDescription';
+//   `);
+
+//   console.log('change results:',results);
+// })();
+
 fs
   .readdirSync(__dirname)
   .filter(file => {
